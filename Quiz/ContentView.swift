@@ -37,9 +37,10 @@ struct ContentView: View {
                     Button(questions[currentQuestion].option4) { didTapOption(4) }
                 }
             }
+            
         }
         .alert(isPresented: $isAlertPresented) {
-            Alert(title: Text(isCorrect ? "Well done!" : "Boooo wrong"),
+            Alert(title: Text(isCorrect ? "Well done!" : "Boooo wrong dummy"),
                   message: Text(isCorrect ? "Congratulations 🎉" : "Try harder please 😔"),
                   dismissButton: .default(Text("OK")){
                     currentQuestion += 1
